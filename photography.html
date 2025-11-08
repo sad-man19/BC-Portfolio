@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sadman Sakib | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="Full view">
+</div>
+    <!-- Header -->
+  <header>
+    <nav>
+  <div class="logo" onclick="handleLogoClick()">Sadman Sakib</div>
+  <ul class="nav-links">
+    <li><a onclick="handleNavClick('home')">Home</a></li>
+    <li><a onclick="handleNavClick('about')">About</a></li>
+    <li><a onclick="handleNavClick('projects')">Projects</a></li>
+    <li><a onclick="handleNavClick('photography')">Photography</a></li>
+    <li><a onclick="handleNavClick('contact')">Contact</a></li>
+  </ul>
+  
+  <!-- Desktop: Dark Mode Toggle -->
+  <button class="desktop-toggle theme-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon"></i>
+  </button>
+  
+  <!-- Mobile: Hamburger -->
+  <button class="mobile-menu" id="mobileMenu" onclick="toggleMobileMenu()" aria-expanded="false" aria-label="Toggle navigation menu">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div class="mobile-nav" id="mobileNav">
+      <a onclick="scrollToSection('home'); closeMobileMenu()">Home</a>
+      <a onclick="scrollToSection('about'); closeMobileMenu()">About</a>
+      <a onclick="scrollToSection('projects'); closeMobileMenu()">Projects</a>
+      <a onclick="scrollToSection('photography'); closeMobileMenu()">Photography</a>
+      <a onclick="scrollToSection('contact'); closeMobileMenu()">Contact</a>
+      <button class="mobile-toggle theme-toggle" onclick="toggleDarkMode(); closeMobileMenu()">
+        <i class="fas fa-moon"></i> Dark Mode
+      </button>
+    </div>
+  </header>
+
+  
+  <section class="section">
+    <h1>My Photography</h1>
+    <div class="photo-filters">
+      <div class="photo-filters">
+      <button class="filter-btn active" onclick="filterPhotos('all')">All</button>
+      <button class="filter-btn" onclick="filterPhotos('nature')">Nature</button>
+      <button class="filter-btn" onclick="filterPhotos('street')">Street</button>
+      <button class="filter-btn" onclick="filterPhotos('portrait')">Portrait</button>
+    </div>
+    </div>
+    <div class="photo-grid-full">
+  <!-- Nature Photos -->
+  <div class="photo-card nature" data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" data-alt="Ocean waves">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop" alt="Ocean waves">
+    <div class="photo-overlay">
+      <h3>Ocean Waves</h3>
+      <p>Beautiful ocean capture</p>
+      <p class="exif">Canon 5D, f/8, 1/250s, ISO 100</p>
+    </div>
+  </div>
+
+  <div class="photo-card nature" data-image="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=600&fit=crop" data-alt="Mountain landscape">
+    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&h=300&fit=crop" alt="Mountain landscape">
+    <div class="photo-overlay">
+      <h3>Mountain Range</h3>
+      <p>Panoramic mountain view</p>
+      <p class="exif">Nikon D750, f/5.6, 1/125s, ISO 200</p>
+    </div>
+  </div>
+
+  <!-- Street Photos -->
+  <div class="photo-card street" data-image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=600&fit=crop" data-alt="City lights">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=300&fit=crop" alt="City lights">
+    <div class="photo-overlay">
+      <h3>City Lights</h3>
+      <p>Urban night photography</p>
+      <p class="exif">Sony A7III, f/2.8, 1/30s, ISO 800</p>
+    </div>
+  </div>
+
+  <div class="photo-card street" data-image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&h=600&fit=crop" data-alt="Urban scene">
+    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=300&fit=crop" alt="Urban scene">
+    <div class="photo-overlay">
+      <h3>Urban Life</h3>
+      <p>Street photography moment</p>
+      <p class="exif">Fujifilm X-T4, f/2, 1/250s, ISO 400</p>
+    </div>
+  </div>
+
+  <!-- Portrait Photos -->
+  <div class="photo-card portrait" data-image="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=600&fit=crop" data-alt="Portrait study">
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=300&fit=crop" alt="Portrait study">
+    <div class="photo-overlay">
+      <h3>Portrait Study</h3>
+      <p>Creative portrait work</p>
+      <p class="exif">Canon R5, f/1.8, 1/200s, ISO 100</p>
+    </div>
+  </div>
+
+  <div class="photo-card portrait" data-image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=600&fit=crop" data-alt="Candid portrait">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop" alt="Candid portrait">
+    <div class="photo-overlay">
+      <h3>Candid Moment</h3>
+      <p>Natural portrait session</p>
+      <p class="exif">Sony A7R IV, f/1.4, 1/320s, ISO 200</p>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- Same scripts as index.html -->
+   <script src="js/script.js"></script>
+</body>
+</html>
