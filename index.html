@@ -85,10 +85,15 @@
       <button class="tab-btn" onclick="showTab('video-cv')">Video CV</button>
       <button class="tab-btn" onclick="showTab('resume')">Resume</button>
     </div>
-<div id="bio" class="tab-content active">
-  <p>Hi, I'm Sadman Sakib – a passionate full-stack developer and photographer from Dhaka. I specialize in building fast, beautiful web applications with React, Next.js, and Tailwind CSS. When I'm not coding, you'll find me behind a camera capturing the beauty of nature and urban life.</p>
-  
-  <div class="social-links">
+
+    <div id="bio" class="tab-content active">
+  <div class="bio-container">
+    <div class="bio-content">
+      <p>Hi, I'm Sadman Sakib – a passionate full-stack developer and photographer from Dhaka. I specialize in building fast, beautiful web applications with React, Next.js, and Tailwind CSS. When I'm not coding, you'll find me behind a camera capturing the beauty of nature and urban life.</p>
+      
+      <div class="social-links">
+        <!-- Your existing social links here -->
+                    <div class="social-links">
     <a href="https://github.com/sad-man19" target="_blank" class="social-link">
       <i class="fab fa-github"></i>
       <span>GitHub</span>
@@ -101,7 +106,7 @@
       <i class="fab fa-facebook"></i>
       <span>Facebook</span>
     </a>
-    <a href="https://www.instagram.com/_sadmansakib/" target="_blank" class="social-link">
+    <a href="https://www.instagram.com/_sadmansakib_/" target="_blank" class="social-link">
       <i class="fab fa-instagram"></i>
       <span>Instagram</span>
     </a>
@@ -118,7 +123,16 @@
       <span>500px</span>
     </a>
   </div>
+      </div>
+    </div>
+    <div class="bio-photo">
+      <img src="assets/photos/profile.jpg" alt="Sadman Sakib">
+    </div>
+  </div>
 </div>
+
+
+
     <div id="education" class="tab-content">
   <div class="education-item">
     <h3>B.Sc. in Computer Science and Engineering</h3>
@@ -274,47 +288,43 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=280&fit=crop" alt="E-Commerce">
-        <div class="project-overlay">
-          <h3 class="project-title">E-Commerce Platform</h3>
-          <p class="project-description">Full-stack store with Stripe payment</p>
-          <p class="project-tech">Next.js • Stripe • MongoDB</p>
-          <a href="#" class="btn btn-primary">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1551288049-b1bd52206d34?w=400&h=280&fit=crop" alt="Task Manager">
-        <div class="project-overlay">
-          <h3 class="project-title">Task Manager</h3>
-          <p class="project-description">Real-time collaborative board</p>
-          <p class="project-tech">React • Socket.io • Tailwind</p>
-          <a href="#" class="btn btn-primary">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&h=280&fit=crop" alt="Gallery">
-        <div class="project-overlay">
-          <h3 class="project-title">Photo Gallery App</h3>
-          <p class="project-description">Responsive gallery with lightbox</p>
-          <p class="project-tech">React • Firebase • Tailwind</p>
-          <a href="#" class="btn btn-primary">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1516321310762-4794370e6a50?w=400&h=280&fit=crop" alt="Chat">
-        <div class="project-overlay">
-          <h3 class="project-title">Chat Application</h3>
-          <p class="project-description">Group & private chat with files</p>
-          <p class="project-tech">React • WebSocket • Node.js</p>
-          <a href="#" class="btn btn-primary">View on GitHub</a>
-        </div>
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <!-- EarthCove Travel System -->
+    <div class="project-card">
+      <img src="assets/photos/earthcove.png" alt="Travel Management System">
+      <div class="project-overlay">
+        <h3 class="project-title">EarthCove</h3>
+        <p class="project-description">Travel management system with booking and customer modules</p>
+        <p class="project-tech">C# • .NET • Backend</p>
+        <a href="#" class="btn btn-primary">View Details</a>
       </div>
     </div>
-  </section>
+
+    <!-- Revents Event System -->
+    <div class="project-card">
+      <img src="assets/photos/revents.png" alt="Event Management System">
+      <div class="project-overlay">
+        <h3 class="project-title">Revents</h3>
+        <p class="project-description">Event management platform with scheduling and authentication</p>
+        <p class="project-tech">Full Stack • Database • UI</p>
+        <a href="#" class="btn btn-primary">View Details</a>
+      </div>
+    </div>
+
+    <!-- Blood Bank Management -->
+    <div class="project-card">
+      <img src="assets/photos/db.jpg" alt="Blood Bank Management System">
+      <div class="project-overlay">
+        <h3 class="project-title">Blood Bank Management</h3>
+        <p class="project-description">Database system for blood bank management</p>
+        <p class="project-tech">MySQL • Database • Data</p>
+        <a href="#" class="btn btn-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Photography -->
   <section id="photography" class="section">
@@ -326,52 +336,56 @@
       <button class="filter-btn" onclick="filterPhotos('portrait')">Portrait</button>
     </div>
     <div class="photo-grid">
-      <div class="photo-card nature">
-        <img src="assets/photos/IMG_6617.jpg" alt="Fireworks">
-        <div class="photo-overlay">
-          <h3>Ocean Waves</h3>
-          <p>A stunning ocean capture</p>
-          <p class="exif">Canon 5D, f/4, 1/125s</p>
-        </div>
-      </div>
+      
       <div class="photo-card street">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=300&fit=crop" alt="City">
+        <img src="assets/photos/bug.jpg" alt="Flower and a bug">
         <div class="photo-overlay">
           <h3>City Lights</h3>
           <p>Urban night scene</p>
           <p class="exif">Nikon D750, f/2.8, 1/60s</p>
         </div>
       </div>
+      <div class="photo-card nature">
+        <img src="assets/photos/Astro.jpg" alt="Milkyway">
+        <div class="photo-overlay">
+          <h3>Ocean Waves</h3>
+          <p>A stunning ocean capture</p>
+          <p class="exif">Canon 5D, f/4, 1/125s</p>
+        </div>
+      </div>
       <div class="photo-card portrait">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=300&fit=crop" alt="Portrait">
+        <img src="assets/photos/leaves.jpg" alt="Leaves">
         <div class="photo-overlay">
           <h3>Portrait Study</h3>
           <p>A creative portrait</p>
           <p class="exif">Sony A7III, f/1.8, 1/200s</p>
         </div>
       </div>
-      <div class="photo-card nature">
-        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&h=300&fit=crop" alt="Mountain">
-        <div class="photo-overlay">
-          <h3>Mountain Dawn</h3>
-          <p>Morning mountain view</p>
-          <p class="exif">Canon EOS R, f/5.6, 1/100s</p>
-        </div>
-      </div>
+      
       <div class="photo-card street">
-        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=300&fit=crop" alt="Urban">
+        <img src="assets/photos/moon.jpg" alt="Moon">
         <div class="photo-overlay">
           <h3>Urban Vibes</h3>
           <p>Dynamic street shot</p>
           <p class="exif">Fujifilm X-T4, f/2, 1/250s</p>
         </div>
       </div>
+
+      
       <div class="photo-card portrait">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop" alt="Candid">
+        <img src="assets/photos/seashore.jpg" alt="Seashore">
         <div class="photo-overlay">
           <h3>Candid Moment</h3>
           <p>A candid portrait</p>
           <p class="exif">Sony A7R IV, f/1.4, 1/320s</p>
+        </div>
+      </div>
+      <div class="photo-card nature">
+        <img src="assets/photos/raindrop.jpg" alt="Raindrop">
+        <div class="photo-overlay">
+          <h3>Mountain Dawn</h3>
+          <p>Morning mountain view</p>
+          <p class="exif">Canon EOS R, f/5.6, 1/100s</p>
         </div>
       </div>
     </div>

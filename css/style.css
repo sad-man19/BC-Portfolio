@@ -1258,6 +1258,36 @@ body:has(.photo-grid-full).dark .mobile-menu {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Bio section with photo on right */
+.bio-container {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.bio-photo {
+  text-align: center;
+}
+
+.bio-photo img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #008080;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark .bio-photo img {
+  border-color: #00a0a0;
+}
+
+.bio-content {
+  flex: 1;
+}
+
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
@@ -1343,4 +1373,18 @@ body:has(.photo-grid-full).dark .mobile-menu {
     max-width: 250px;
   }
 
+  .bio-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .bio-photo {
+    order: -1; /* Move photo above text on mobile */
+  }
+  
+  .bio-photo img {
+    width: 180px;
+    height: 180px;
+  }
 }
