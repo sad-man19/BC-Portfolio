@@ -137,11 +137,11 @@ document.addEventListener('click', (e) => {
 });
 
 // ========================================
-// NAVIGATION HANDLERS
+// NAVIGATION HANDLERS - FIXED
 // ========================================
 
 function handleLogoClick() {
-  if (window.location.pathname.includes('photography.html')) {
+  if (isPhotographyPage()) {
     // On photography page, go to homepage
     window.location.href = 'index.html';
   } else {
@@ -151,10 +151,10 @@ function handleLogoClick() {
 }
 
 function handleNavClick(section) {
-  if (window.location.pathname.includes('photography.html')) {
+  if (isPhotographyPage()) {
     // On photography page
     if (section === 'photography') {
-      // Already on photography page, do nothing or scroll to top
+      // Already on photography page, scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (section === 'home') {
       // Go to homepage
@@ -168,6 +168,12 @@ function handleNavClick(section) {
     scrollToSection(section);
   }
   closeMobileMenu();
+}
+
+// Check if we're on photography page
+function isPhotographyPage() {
+  return window.location.pathname.includes('photography.html') || 
+         window.location.href.includes('photography.html');
 }
 
 // ========================================
@@ -232,7 +238,6 @@ function protectPhotos() {
   document.addEventListener('contextmenu', function(e) {
     if (e.target.tagName === 'IMG') {
       e.preventDefault();
-      alert('Photos are protected from downloading');
       return false;
     }
   });
@@ -293,6 +298,24 @@ function initPhotographyPage() {
   
   // Enable photo protection
   protectPhotos();
+  
+  // Initialize mobile menu for photography page
+  initMobileMenu();
+}
+
+// ========================================
+// MOBILE MENU INITIALIZATION
+// ========================================
+
+function initMobileMenu() {
+  // Add click events to mobile menu links
+  const mobileLinks = document.querySelectorAll('.mobile-nav a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const section = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+      handleNavClick(section);
+    });
+  });
 }
 
 // ========================================
@@ -307,6 +330,9 @@ function initHomepage() {
   homePhotos.forEach(card => {
     card.style.cursor = 'default';
   });
+  
+  // Initialize mobile menu for homepage
+  initMobileMenu();
 }
 
 // ========================================
@@ -339,12 +365,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle URL hash on page load
   handleUrlHash();
   
-  // Initialize navbar scroll (only for homepage)
-  if (!window.location.pathname.includes('photography.html')) {
-    handleNavbarScroll();
-    window.addEventListener('scroll', handleNavbarScroll);
-  }
-  
   // Check which page we're on and initialize accordingly
   const isPhotographyPage = window.location.pathname.includes('photography.html');
   
@@ -353,6 +373,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initPhotographyPage();
   } else {
     console.log('This is the homepage');
+    // Initialize navbar scroll for homepage only
+    handleNavbarScroll();
+    window.addEventListener('scroll', handleNavbarScroll);
+    
     initHomepage();
     initTypewriter();
     initHeroSlideshow();

@@ -37,17 +37,17 @@
   </button>
 </nav>
 
-    <!-- Mobile Menu Dropdown -->
-    <div class="mobile-nav" id="mobileNav">
-      <a onclick="scrollToSection('home'); closeMobileMenu()">Home</a>
-      <a onclick="scrollToSection('about'); closeMobileMenu()">About</a>
-      <a onclick="scrollToSection('projects'); closeMobileMenu()">Projects</a>
-      <a onclick="scrollToSection('photography'); closeMobileMenu()">Photography</a>
-      <a onclick="scrollToSection('contact'); closeMobileMenu()">Contact</a>
-      <button class="mobile-toggle theme-toggle" onclick="toggleDarkMode(); closeMobileMenu()">
-        <i class="fas fa-moon"></i> Dark Mode
-      </button>
-    </div>
+<!-- Mobile Menu Dropdown -->
+<div class="mobile-nav" id="mobileNav">
+  <a onclick="handleNavClick('home')">Home</a>
+  <a onclick="handleNavClick('about')">About</a>
+  <a onclick="handleNavClick('projects')">Projects</a>
+  <a onclick="handleNavClick('photography')">Photography</a>
+  <a onclick="handleNavClick('contact')">Contact</a>
+  <button class="mobile-toggle theme-toggle" onclick="toggleDarkMode(); closeMobileMenu()">
+    <i class="fas fa-moon"></i> Dark Mode
+  </button>
+</div>
   </header>
 
   

@@ -17,7 +17,7 @@ body {
 }
 
 .dark {
-  background: #0a0a0a;
+  background: #1a1a1a;
   color: #f0f0f0;
 }
 
@@ -439,6 +439,17 @@ header.scrolled .mobile-nav button {
   background: linear-gradient(90deg, #008080, #00a0a0);
   border-radius: 4px;
   transition: width 1.5s ease;
+  
+}
+
+/* Add margin to skill items */
+.skill-item {
+  margin: 1rem 0;
+}
+
+/* Adjust skills grid gap for better spacing */
+.skills-grid {
+  gap: 1rem;
 }
 
 /* ========================================
@@ -947,6 +958,307 @@ body:has(.photo-grid-full).dark .mobile-menu {
 }
 
 /* ========================================
+   EDUCATION STYLES
+   ======================================== */
+.education-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #008080;
+}
+
+.dark .education-item {
+  background: #2a2a2a;
+}
+
+.education-item h3 {
+  color: #008080;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.dark .education-item h3 {
+  color: #00a0a0;
+}
+
+.institution {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.dark .institution {
+  color: #f0f0f0;
+}
+
+.duration {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.dark .duration {
+  color: #aaa;
+}
+
+.grade {
+  color: #008080;
+  font-weight: 500;
+}
+
+/* ========================================
+   EXPERIENCE STYLES
+   ======================================== */
+.experience-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-left: 4px solid #008080;
+}
+
+.dark .experience-item {
+  background: #2a2a2a;
+}
+
+.experience-item h3 {
+  color: #008080;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.dark .experience-item h3 {
+  color: #00a0a0;
+}
+
+.company {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.dark .company {
+  color: #f0f0f0;
+}
+
+.location {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.dark .location {
+  color: #aaa;
+}
+
+.experience-item ul {
+  padding-left: 1.5rem;
+}
+
+.experience-item li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ========================================
+   SKILLS CATEGORIES
+   ======================================== */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skills-category h3 {
+  color: #008080;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.dark .skills-category h3 {
+  color: #00a0a0;
+}
+
+/* ========================================
+   AWARDS & CERTIFICATIONS
+   ======================================== */
+/*
+   .awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.award-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #008080;
+}
+
+.dark .award-item {
+  background: #2a2a2a;
+}
+
+.award-item i {
+  font-size: 1.5rem;
+  color: #008080;
+  margin-top: 0.25rem;
+}
+
+.dark .award-item i {
+  color: #00a0a0;
+}
+
+.award-content h3 {
+  color: #008080;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.dark .award-content h3 {
+  color: #00a0a0;
+}
+
+.year {
+  color: #666;
+  font-style: italic;
+}
+
+.dark .year {
+  color: #aaa;
+}
+
+.details {
+  color: #333;
+}
+
+.dark .details {
+  color: #f0f0f0;
+}
+*/
+
+/* ========================================
+   RESUME DOWNLOAD
+   ======================================== */
+.resume-download {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.resume-note {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark .resume-note {
+  color: #aaa;
+}
+
+.resume-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .contact-info {
+  background: #2a2a2a;
+}
+
+.contact-info h3 {
+  color: #008080;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.dark .contact-info h3 {
+  color: #00a0a0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.dark .contact-item {
+  background: #1a1a1a;
+}
+
+.contact-item i {
+  color: #008080;
+  width: 20px;
+  text-align: center;
+}
+
+.dark .contact-item i {
+  color: #00a0a0;
+}
+
+/* Justify text in about section */
+.tab-content p,
+.tab-content li {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Keep headings and special elements left-aligned */
+.tab-content h1,
+.tab-content h2,
+.tab-content h3,
+.tab-content h4,
+.tab-content .social-links,
+.tab-content .btn {
+  text-align: left;
+}
+
+/* Add hover effects to all cards in About section */
+.education-item,
+.experience-item,
+.skill-item,
+.publication-item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.education-item:hover,
+.experience-item:hover,
+.skill-item:hover,
+.publication-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark .education-item:hover,
+.dark .experience-item:hover,
+.dark .skill-item:hover,
+.dark .publication-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 768px) {
@@ -1006,4 +1318,29 @@ body:has(.photo-grid-full).dark .mobile-menu {
   .lightbox-next {
     right: 1rem;
   }
+
+  .skills-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .education-item,
+  .experience-item,
+  .award-item {
+    padding: 1rem;
+  }
+  
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+    .resume-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resume-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
 }

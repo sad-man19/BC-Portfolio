@@ -37,17 +37,17 @@
   </button>
 </nav>
 
-    <!-- Mobile Menu Dropdown -->
-    <div class="mobile-nav" id="mobileNav">
-      <a onclick="scrollToSection('home'); closeMobileMenu()">Home</a>
-      <a onclick="scrollToSection('about'); closeMobileMenu()">About</a>
-      <a onclick="scrollToSection('projects'); closeMobileMenu()">Projects</a>
-      <a onclick="scrollToSection('photography'); closeMobileMenu()">Photography</a>
-      <a onclick="scrollToSection('contact'); closeMobileMenu()">Contact</a>
-      <button class="mobile-toggle theme-toggle" onclick="toggleDarkMode(); closeMobileMenu()">
-        <i class="fas fa-moon"></i> Dark Mode
-      </button>
-    </div>
+<!-- Mobile Menu Dropdown -->
+<div class="mobile-nav" id="mobileNav">
+  <a onclick="handleNavClick('home')">Home</a>
+  <a onclick="handleNavClick('about')">About</a>
+  <a onclick="handleNavClick('projects')">Projects</a>
+  <a onclick="handleNavClick('photography')">Photography</a>
+  <a onclick="handleNavClick('contact')">Contact</a>
+  <button class="mobile-toggle theme-toggle" onclick="toggleDarkMode(); closeMobileMenu()">
+    <i class="fas fa-moon"></i> Dark Mode
+  </button>
+</div>
   </header>
 
   <!-- Hero -->
@@ -86,89 +86,144 @@
       <button class="tab-btn" onclick="showTab('resume')">Resume</button>
     </div>
 <div id="bio" class="tab-content active">
-  <p>Hi, I'm Sadman Sakib – a full-stack developer and photographer from Dhaka. I build fast, beautiful web apps with React, Next.js, and Tailwind. When I'm not coding, you'll find me behind a camera capturing nature and street moments.</p>
+  <p>Hi, I'm Sadman Sakib – a passionate full-stack developer and photographer from Dhaka. I specialize in building fast, beautiful web applications with React, Next.js, and Tailwind CSS. When I'm not coding, you'll find me behind a camera capturing the beauty of nature and urban life.</p>
   
   <div class="social-links">
-    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+    <a href="https://github.com/sad-man19" target="_blank" class="social-link">
       <i class="fab fa-github"></i>
       <span>GitHub</span>
     </a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+    <a href="https://www.linkedin.com/in/sadman-sakib-92bba31b7" target="_blank" class="social-link">
       <i class="fab fa-linkedin"></i>
       <span>LinkedIn</span>
     </a>
-    <a href="https://facebook.com/yourusername" target="_blank" class="social-link">
+    <a href="https://www.facebook.com/sadmansakib.sakib.58/" target="_blank" class="social-link">
       <i class="fab fa-facebook"></i>
       <span>Facebook</span>
     </a>
-    <a href="https://instagram.com/yourusername" target="_blank" class="social-link">
+    <a href="https://www.instagram.com/_sadmansakib/" target="_blank" class="social-link">
       <i class="fab fa-instagram"></i>
       <span>Instagram</span>
     </a>
-    <a href="https://twitter.com/yourusername" target="_blank" class="social-link">
+    <a href="https://x.com/Sadmansakib0807" target="_blank" class="social-link">
       <i class="fab fa-twitter"></i>
       <span>X (Twitter)</span>
     </a>
-    <a href="https://threads.net/yourusername" target="_blank" class="social-link">
-      <i class="fab fa-threads"></i>
-      <span>Threads</span>
-    </a>
-    <a href="https://flickr.com/yourusername" target="_blank" class="social-link">
+    <a href="https://www.flickr.com/photos/189690283@N07/" target="_blank" class="social-link">
       <i class="fab fa-flickr"></i>
       <span>Flickr</span>
     </a>
-    <a href="https://500px.com/yourusername" target="_blank" class="social-link">
+    <a href="https://500px.com/p/sadman0807" target="_blank" class="social-link">
       <i class="fab fa-500px"></i>
       <span>500px</span>
     </a>
   </div>
 </div>
     <div id="education" class="tab-content">
-      <p><strong>B.Sc. Computer Science & Engineering</strong><br>American International University - Bangladesh (2022-2026)<br><br><p><strong>Higher Secondary School Certificate</strong><br>Dhaka Commerce College (2019-2021)<br><br> Coursework:<br>• Data Structures & Algorithms<br>• Web Development<br>• UI/UX Design</p>
-    </div>
+  <div class="education-item">
+    <h3>B.Sc. in Computer Science and Engineering</h3>
+    <p class="institution">American International University-Bangladesh (AIUB)</p>
+    <p class="duration">2022 - 2026 (Expected)</p>
+    <p class="grade">Current CGPA: 3.66 / 4.00</p>
+  </div>
+  
+  <div class="education-item">
+    <h3>Higher Secondary Certificate (HSC)</h3>
+    <p class="institution">Dhaka Commerce College</p>
+    <p class="duration">2021</p>
+    <p class="grade">GPA: 4.92 / 5.00</p>
+  </div>
+  
+  <div class="education-item">
+    <h3>Secondary School Certificate (SSC)</h3>
+    <p class="institution">Shaheed Police Smrity College</p>
+    <p class="duration">2019</p>
+    <p class="grade">GPA: 4.33 / 5.00</p>
+  </div>
+</div>
     <div id="skills" class="tab-content">
-      <div class="skills-grid">
-        <div class="skill-item">
-          <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
-          <p>React / Next.js - 92%</p>
-        </div>
-        <div class="skill-item">
-          <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
-          <p>Tailwind CSS - 88%</p>
-        </div>
-        <div class="skill-item">
-          <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-          <p>Node.js - 80%</p>
-        </div>
-        <div class="skill-item">
-          <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-          <p>Photography - 85%</p>
-        </div>
+  <div class="skills-categories">
+    <div class="skills-category">
+      <h3>Technical Skills</h3>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+        <p>Node.js / React / JavaScript - 92%</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+        <p>REST APIs / Git - 88%</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+        <p>C# / .NET - 85%</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+        <p>MySQL / Database Design - 90%</p>
       </div>
     </div>
-    <div id="experience" class="tab-content">
-      <p><strong>Web Developer Intern</strong><br>ABC Tech (Summer 2024)<br><br>• Built responsive dashboards with React & Chart.js<br>• Integrated REST APIs<br>• Optimized performance by 40%</p>
+    
+    <div class="skills-category">
+      <h3>Professional Skills</h3>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+        <p>Leadership & Team Coordination - 95%</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+        <p>Problem Solving - 90%</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+        <p>Communication - 88%</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+        <p>Time Management - 92%</p>
+      </div>
     </div>
+  </div>
+</div>
+    <div id="experience" class="tab-content">
+  <div class="experience-item">
+    <h3>Customer Relations Manager</h3>
+    <p class="company">Classics</p>
+    <p class="duration">Jul 2025 - Present</p>
+    <p class="location">Remote (Work from Home)</p>
+    <ul>
+      <li>Lead and supervise a team to ensure smooth client communication and workflow</li>
+      <li>Oversee client relationship management and address critical feedback professionally</li>
+      <li>Apply leadership and decision-making skills to improve customer satisfaction and retention</li>
+    </ul>
+  </div>
+  
+  <div class="experience-item">
+    <h3>Backend Developer - Travel Management System "EarthCove"</h3>
+    <p class="company">Academic Project</p>
+    <p class="duration">Sept 2024</p>
+    <ul>
+      <li>Developed backend modules in C# for booking, customer management, and data processing</li>
+      <li>Created reusable object-oriented components to improve code maintainability</li>
+      <li>Integrated backend functionality with frontend user interfaces</li>
+    </ul>
+  </div>
+  
+  <div class="experience-item">
+    <h3>Full Stack Developer - Event Management System "Revents"</h3>
+    <p class="company">Academic Project</p>
+    <p class="duration">May 2023</p>
+    <ul>
+      <li>Built a complete event management platform including event scheduling, booking, and user authentication</li>
+      <li>Ensured database consistency and improved UI responsiveness</li>
+    </ul>
+  </div>
+</div>
     <div id="publications" class="tab-content">
   <div class="publications-list">
     <div class="publication-item">
-      <h3>Advanced Machine Learning Techniques for Image Recognition</h3>
-      <p class="publication-meta">International Journal of Computer Science • 2024</p>
-      <p class="publication-description">This paper explores novel approaches to image recognition using deep learning architectures and transfer learning techniques.</p>
-      <a href="#" class="btn btn-secondary">Read Paper</a>
-    </div>
-    
-    <div class="publication-item">
-      <h3>Web Performance Optimization in Modern React Applications</h3>
-      <p class="publication-meta">ACM Computing Reviews • 2023</p>
-      <p class="publication-description">Analysis of performance bottlenecks in React applications and implementation strategies for optimization.</p>
-      <a href="#" class="btn btn-secondary">Read Paper</a>
-    </div>
-    
-    <div class="publication-item">
-      <h3>Computational Photography: Bridging AI and Creative Expression</h3>
-      <p class="publication-meta">Journal of Digital Arts • 2023</p>
-      <p class="publication-description">Exploring the intersection of artificial intelligence and photographic art through computational methods.</p>
+      <h3>Enhancing Predictive Maintenance in Smart Textile Manufacturing Using Machine Learning Models</h3>
+      <p class="publication-meta">IEEE 2nd International Conference on Computing, Applications and Systems • 2025</p>
+      <p class="publication-description">ML– based machine failure prediction to reduce downtime in textile manufacturing.</p>
       <a href="#" class="btn btn-secondary">Read Paper</a>
     </div>
   </div>
@@ -188,9 +243,34 @@
   </div>
 </div>
     <div id="resume" class="tab-content">
-      <a href="assets/SADMAN SAKIB_CV_Bus_Comm.pdf" download="Sadman_Sakib_Resume.pdf" class="btn btn-primary">Download Resume (PDF)</a>
-      <p style="margin-top: 1rem; font-size: 0.9rem;">If the download doesn't start automatically, <a href="assets/SADMAN SAKIB_CV_Bus_Comm.pdf" target="_blank">click here to view</a>.</p>
+  <div class="resume-download">
+    <div class="resume-buttons">
+      <a href="assets/SADMAN SAKIB_CV_Bus_Comm.pdf" download="Sadman_Sakib_Resume.pdf" class="btn btn-primary">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+      <a href="assets/SADMAN SAKIB_CV_Bus_Comm.pdf" target="_blank" class="btn btn-secondary">
+        <i class="fas fa-eye"></i> View Resume
+      </a>
     </div>
+    <p class="resume-note">View online or download the PDF version of my complete resume.</p>
+  </div>
+  
+  <div class="contact-info">
+    <h3>Contact Information</h3>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>contact.sadman19@gmail.com</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Dhaka, Bangladesh</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-graduation-cap"></i>
+      <span>American International University-Bangladesh (AIUB)</span>
+    </div>
+  </div>
+</div>
   </section>
 
   <!-- Projects -->
