@@ -137,17 +137,29 @@ document.addEventListener('click', (e) => {
 });
 
 // ========================================
-// NAVIGATION HANDLERS - FIXED
+// SIMPLE NAVIGATION THAT WORKS ON NETLIFY
 // ========================================
 
 function handleLogoClick() {
-  if (isPhotographyPage()) {
-    // On photography page, go to homepage
-    window.location.href = 'index.html';
+  // Always go to index.html - simple and reliable
+  window.location.href = 'index.html';
+}
+
+function handleNavClick(section) {
+  if (window.location.pathname.includes('photography')) {
+    // If on photography page, always go to index.html first
+    if (section === 'photography') {
+      // If clicking photography while on photography page, just scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // For any other section, go to index.html
+      window.location.href = 'index.html';
+    }
   } else {
-    // On homepage, scroll to top
-    scrollToSection('home');
+    // If on homepage, use normal smooth scroll
+    scrollToSection(section);
   }
+  closeMobileMenu();
 }
 
 function handleNavClick(section) {
